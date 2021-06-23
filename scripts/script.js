@@ -138,23 +138,17 @@ function generateWether(inputVal) {
         }else{
             console.log('online_data');
             fetch(url)
-                .then(function(response) {
-                    if (!response.ok) {
-                        throw Error(response.statusText);
-                    }else{
-                        response => response.json()
-                        // return response;
-                    }
-                }).then(data => {
-                if(!data){
-                    if(localStorage.getItem("todoData")){
-                        data = JSON.parse(localStorage.getItem("wetherObj"));
-                    }else{
-                        alert('connection error')
-                    }
-                }else{
-                    localStorage.setItem("wetherObj", JSON.stringify(data));
-                }
+                .then(response => response.json()).then(data => {
+                // if(!data){
+                //     if(localStorage.getItem("todoData")){
+                //         data = JSON.parse(localStorage.getItem("wetherObj"));
+                //     }else{
+                //         alert('connection error')
+                //     }
+                // }else{
+                //     localStorage.setItem("wetherObj", JSON.stringify(data));
+                // }
+                localStorage.setItem("wetherObj", JSON.stringify(data));
                 const { main, name, sys, weather } = data;
 
                 const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
