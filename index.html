@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wether App</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <section class="top-banner">
+    <div class="container">
+      <h1 class="heading">Your weather</h1>
+    </div>
+  </section>
+  <section class="ajax-section">
+    <div class="container">
+      <ul class="cities">
+        <img class="loader" src="images/loading.gif" alt="">
+      </ul>
+    </div>
+  </section>
+  <section class="top-banner">
+    <div class="container">
+      <div class="c_f">
+        <div class="chb celsii">°C</div>
+        <div class="chb fahrenheit">°F</div>
+      </div>
+      <form id="search_city">
+        <input type="text" placeholder="Search for a city" autofocus>
+        <button type="submit">SEARCH</button>
+        <span class="msg"></span>
+      </form>
+    </div>
+  </section>
+</body>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="scripts/script.js"></script>
+</html>
